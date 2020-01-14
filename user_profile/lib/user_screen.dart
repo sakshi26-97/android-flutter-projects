@@ -1,16 +1,25 @@
 import 'package:flutter/material.dart';
+import 'services/login.dart';
 
-class UserScreen extends StatefulWidget {
-  static const String id = 'user_screen';
-  @override
-  _UserScreenState createState() => _UserScreenState();
-}
-
-class _UserScreenState extends State<UserScreen> {
+class UserScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      appBar: AppBar(
+        title: Text('User Profile'),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.power_settings_new),
+            onPressed: () async {
+//              await signOut();
+              signOut()
+                  .then((value) => print(value))
+                  .catchError((e) => print(e));
+              Navigator.pop(context);
+            },
+          ),
+        ],
+      ),
     );
   }
 }

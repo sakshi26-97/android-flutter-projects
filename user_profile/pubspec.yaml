@@ -25,7 +25,9 @@ dependencies:
   cupertino_icons: ^0.1.2
   geolocator: ^5.2.0
 #  firebase_auth: ^0.11.1+8
-#  google_sign_in: ^4.1.1
+  google_sign_in: ^4.1.1
+  google_sign_in_platform_interface: ^1.0.3
+  googleapis: ^0.54.0
 
 dev_dependencies:
   flutter_test:
